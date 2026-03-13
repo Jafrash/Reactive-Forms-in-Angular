@@ -73,39 +73,4 @@ Submit button behavior:
 
 5. `form-validaton-service.ts` is scaffolded but not yet integrated.
 
-## How To Run
 
-From `FormValidation/`:
-
-```bash
-npm install
-npm start
-```
-
-Open `http://localhost:4200/`.
-
-## How To Build
-
-From `FormValidation/`:
-
-```bash
-npm run build
-```
-
-## How To Test
-
-From `FormValidation/`:
-
-```bash
-npm test
-```
-
-## Suggested Next Improvements
-
-- Align validators and UI rules:
-  - Add `Validators.required` to email/password if required fields are intended.
-  - Or remove required messages from template if optional.
-- Render inputs for `username` and `phone`, or remove them from the form model.
-- Update `app.spec.ts` to match the real root template.
-- Implement real logic in `FormValidatonService` (or remove until needed).
-- Add success and error feedback in the UI instead of console-only output.
