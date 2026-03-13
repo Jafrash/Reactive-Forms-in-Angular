@@ -1,0 +1,38 @@
+<div class="max-w-md mx-auto mt-12 p-6 bg-white rounded-lg shadow-md">
+
+  <h2 class="text-2xl font-semibold mb-4">Login Form</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-4">
+
+    <!-- EMAIL -->
+    <div>
+      <label class="block mb-1 text-sm font-medium">Email</label>
+      <input type="email" formControlName="email" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+
+      <ng-container *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+        <p *ngIf="loginForm.get('email')?.errors?.['required']" class="text-sm text-red-600">Email is required</p>
+        <p *ngIf="loginForm.get('email')?.errors?.['email']" class="text-sm text-red-600">Invalid email</p>
+      </ng-container>
+
+    </div>
+
+
+    <!-- PASSWORD -->
+    <div>
+
+      <label class="block mb-1 text-sm font-medium">Password</label>
+      <input type="password" formControlName="password" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+
+      <ng-container *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        <p *ngIf="loginForm.get('password')?.errors?.['required']" class="text-sm text-red-600">Password is required</p>
+        <p *ngIf="loginForm.get('password')?.errors?.['minlength']" class="text-sm text-red-600">Minimum 6 characters required</p>
+      </ng-container>
+
+    </div>
+
+
+    <button type="submit" [disabled]="loginForm.invalid" class="w-full bg-sky-600 text-white py-2 rounded disabled:opacity-50">Login</button>
+
+  </form>
+
+</div>
