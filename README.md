@@ -1,10 +1,4 @@
 
-
-## Layout
-
-- `FormValidation/`: Angular application source, config, and tests
-- `package-lock.json`: Root lockfile in the parent workspace
-
 ## Project Summary
 
 The Angular app is a standalone application (no NgModule-based bootstrapping) that renders a single `FormValidation` component.
