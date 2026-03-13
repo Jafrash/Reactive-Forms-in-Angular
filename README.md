@@ -1,8 +1,6 @@
-# Hartford Form Validation Workspace
 
-This workspace contains an Angular 21 project focused on learning and demonstrating reactive form validation.
 
-## Workspace Layout
+## Layout
 
 - `FormValidation/`: Angular application source, config, and tests
 - `package-lock.json`: Root lockfile in the parent workspace
