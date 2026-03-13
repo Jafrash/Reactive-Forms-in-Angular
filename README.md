@@ -56,19 +56,4 @@ Submit button behavior:
 - Disabled while the overall form is invalid
 - On submit, logs `Login Data:` with form values when valid
 
-## Important Notes From Code Analysis
-
-1. There is a mismatch between form model and template:
-   - `username` and `phone` exist in the form group but have no input fields in the template.
-
-2. Required-check messages are present in the template for email/password, but the form model does not mark those controls as required.
-   - This means the `required` error messages currently cannot trigger.
-
-3. The root app spec includes a title assertion that does not match the actual rendered template.
-   - `app.spec.ts` checks for `Hello, FormValidation` in an `h1`, but `App` renders only `<app-form-validation>`.
-
-4. `BrowserModule`, `ReactiveFormsModule`, `RouterOutlet`, and `CommonModule` imports in `app.ts` are not all used directly.
-
-5. `form-validaton-service.ts` is scaffolded but not yet integrated.
-
 
